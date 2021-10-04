@@ -1,0 +1,34 @@
+<br>
+<div id="topicc"></div>
+<br>
+
+<body class="is-preload">
+    <font color="black" size="3" left=10%><b>經絡圖片</b></font><br>
+    <font color="black" size="2" class="pic"></font><br>
+    <font color="black" size="3" left=10%><b>經絡位置</b></font><br>
+    <font color="black" size="2" class="pos"></font><br>
+    <font color="black" size="3" left=10%><b>經絡功用</b></font><br>
+    <font color="black" size="2" class="use"></font><br>
+</body>
+<script>
+    $.ajax({
+        url: "http://120.126.151.210/acupoint-1.1/merpic.php",
+        datatype: "json",
+        success: function (data) {
+            data = JSON.parse(data);
+            $.each(data, function (index, value) {
+                for (i = 1; i <= 14; i++) {
+                    if (value[0] == document.getElementById('topicc').innerText) {
+                        $('.pos').html(value[1]);
+                        $('.use').html(value[2]);
+                        $('.pic').html('<img width="85%" type="image" src="' + value[3] + '"></img>');
+                        break;
+                    }
+                }
+            })
+        }
+    });
+</script>
+<div class="footer">
+    <img src="images/home.png" width=10% style="background-color: transparent" onclick="getdata2('page2');">
+</div>

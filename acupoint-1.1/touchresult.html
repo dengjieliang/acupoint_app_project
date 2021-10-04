@@ -1,0 +1,46 @@
+<html>
+<br>
+<div id="topicc">圖片查詢結果</div>
+<span class="right">
+    <button id="secondsearch" onclick="specialsearch()">進行進階查詢</button>
+</span>
+<br>
+<br>
+<div class="inner">
+    <nav id="menu">
+        <ul>
+            <div style="font-weight:bold;font-size:25px" id="nearest"></div>
+            <li>
+                <span class="opener">同一條經絡之穴道</span>
+                <ul>
+                    <div id="near"></div>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="footer">
+    <img src="images/home.png" width=10% style="background-color: transparent" onclick="getdata2('page2');">
+</div>
+<div id="datasave" style="display:none"></div>
+</html>
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <btn type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </btn>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <btn type="button" class="btn btn-secondary" data-dismiss="modal"></btn>
+                <btn type="button" class="btn btn-primary" id="moddal" onclick="searchchose();"></btn>
+            </div>
+        </div>
+    </div>
+</div>
